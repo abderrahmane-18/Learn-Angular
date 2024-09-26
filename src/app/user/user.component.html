@@ -2,14 +2,15 @@
   <h2>Sample Table</h2>
   <table class="table table-bordered table-striped">
     <thead class="thead-dark">
-      <tr>
+      <tr  *ngIf="users.length>2">
+        {{users.length}}
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
         <th>Mobile</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <!-- if using  simple object
       <tr >
         <td>{{user.id}}</td>
@@ -19,11 +20,13 @@
       </tr>
       -->
       <!-- if using array of objects -->
-      <tr *ngFor="let user of users">
+      <tr  *ngFor="let user of users">
+
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
         <td>{{user.mobile}}</td>
+
       </tr>
     </tbody>
   </table>

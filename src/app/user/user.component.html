@@ -10,7 +10,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <!-- if using  simple object
+      <tr >
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobile}}</td>
+      </tr>
+      -->
+      <!-- if using array of objects -->
+      <tr *ngFor="let user of users">
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
